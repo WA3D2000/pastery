@@ -1,0 +1,421 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+
+}
+/* dark mode */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode .card,
+
+.dark-mode .offers
+ {
+    background-color: #444;
+    color: #ffffff;
+}
+.dark-mode nav span{
+    color: #2a1b2e;
+}
+.dark-mode footer{
+    background-color: #00000067;
+}
+.dark-mode footer span{
+    color: #e7e7e7;
+}
+.dark-mode .btn {
+    background-color: #555;
+    color: #ffffff;
+}
+.dark-mode .btn:hover {
+    background-color: #666;
+    color: #ffffff;
+}
+.dark-mode span{
+    color: #ffffff;
+}
+.center {
+    margin: 0 auto;
+}
+nav {
+    padding: 7px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+
+}
+nav ul {
+
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    color: black;
+    gap: 15px;
+}
+nav ul a {
+    text-transform: capitalize;
+}
+span {
+    color: rgb(68, 82, 68);
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+}
+/*nav ends*/
+
+.hero {
+    width: 100%;
+    height: 70vh;
+    background-image:url('./imgs/back-ground.jpg');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.hero-text {
+    width: 50%;
+    margin-left: 15px;
+    position: absolute;
+    top: 30%;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    color: rgb(33, 25, 36);
+}
+.hero-text .bt {
+    position: absolute;
+    left: 30%;
+    padding: 10px 30px;
+    margin-top: 10px;
+    background-color: rgb(84, 80, 85);
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+.hero-text .bt:hover {
+    background-color: rgb(84, 80, 85);
+    font-style: italic;
+    color: black;
+    font-size: 20px;
+    border: 1px solid rgb(84, 80, 85);
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/*  hero ends  */
+.separatotr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    padding: 20px;
+}
+
+/* separotr ends */
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(234, 208, 240, 0.301);
+
+}
+.card img {
+    width: 100%;
+    border-radius: 30px;
+}
+.card {
+    text-align: center;
+    position: relative;
+    width: calc((100% /3) - 20px);
+    cursor: pointer;
+}
+.card img {
+    transition: transform 0.3s ease;
+
+}
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    border-radius: 30px;
+    background-color: rgba(126, 106, 117, 0.836);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+.card:hover .image-overlay {
+    opacity: 1;
+
+}
+.card:hover h2 {
+    animation: shake 0.5s infinite;
+}
+/* cards animation*/
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    30% {
+        transform: translate(2px, 2px) rotate(45deg);
+    }
+
+    60% {
+        transform: translate(-2px, -2px) rotate(-45deg);
+    }
+    100%{
+        transform: translate(0,0) rotate(0deg); 
+    }
+}
+
+/* cards style ends */
+.grid-album {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 100px 300px 300px;
+    grid-template-areas: ".        heading     .  "
+        " item-1  item-2   item-3 "
+        " item-4  item-5   item-6 ";
+    row-gap: 10px;
+    column-gap: 20px;
+    justify-content: center;
+}
+.heading {
+    grid-area: heading;
+    text-align: center;
+    padding: 20px;
+}
+.item-1 {
+    grid-area: item-1;
+}
+.item-2 {
+    grid-area: item-2;
+}
+.item-3 {
+    grid-area: item-3;
+}
+.item-4 {
+    grid-area: item-4;
+}
+.item-5 {
+    grid-area: item-5;
+}
+.item-6 {
+    grid-area: item-6;
+}
+.grid-album img {
+    width: 390px;
+    height: 290px;
+}
+/* grid album ends  */
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50vh;
+}
+.option img {
+    width: 150px;
+    border-radius: 30px;
+}
+.option {
+    padding: 15px;
+    text-align: center;
+    width: calc((100% /3) - 20px);
+}
+/* options ends */
+.offers{
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 100px 600px 100px;
+    grid-template-areas: "hed      hed     hed  "
+                         " family  friends   friday"
+                         " foot  foot   foot ";
+    row-gap: 10px;
+    column-gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+.offers img{
+    width:300px;
+}
+.offers button{
+    margin-top: 10px;
+    padding: 5px ;
+    border-radius: 10px;
+    background-color: #444;
+    color: #ffffff;
+}
+.offers h3{
+    padding: 15px;
+}
+.hed{
+    padding: 20px;
+    text-align: center;
+    grid-area: hed;
+}
+.family{
+    padding: 20px;
+    grid-area: family;
+    display: flex;
+    flex-direction: column;
+
+}
+.friends{
+    padding: 20px;
+    grid-area:friends;
+    display: flex;
+    flex-direction: column;
+
+}
+.friday{
+    padding: 20px;
+    grid-area:friday;
+    display: flex;
+    flex-direction: column;
+
+}
+.foot{
+    text-align: center;
+    grid-area:foot;
+}
+.family:hover img{
+    animation: shake 0.5s infinite;
+}
+.friends:hover img{
+    animation: shake 0.5s infinite;
+}
+.friday:hover img{
+    animation: shake 0.5s infinite;
+}
+
+/* offers end*/
+
+footer {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: rgba(126, 106, 117, 0.836) ;
+}
+footer ul {
+    width: 50px;
+    list-style: none;
+}
+footer ul li {
+    margin: 20px;
+    gap: 4px;
+    display: flex;
+
+}
+li i {
+    width: 50px;
+    padding: 12px;
+    background-color: rgb(26, 26, 44);
+    color: white;
+    border-radius: 50%;
+}
+footer .form {
+    display: flex;
+    flex-direction: column;
+}
+footer .form input {
+    padding: 10px 30px;
+    background-color: azure;
+    color: rgb(19, 18, 22);
+    margin-bottom: 4px;
+    border: 1px solid rgb(149, 130, 151);
+    border-radius: 6px;
+}
+footer .form button {
+    background-color: rgb(14, 14, 15);
+    color: white;
+    font-size: 10px;
+    padding: 5px 15px;
+    border-radius: 6px;
+    border: 1px solid rgb(149, 130, 151);
+}
+footer .form button:hover {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    padding: 5px 15px;
+    border-radius: 6px;
+    border: 1px solid rgb(38, 28, 39);
+}
+.counter {
+     font-size: 1em;
+     color: #e0e0e0;
+}
+/* templett ends */
+
+/* responsive*/
+@media (max-width:600px) {
+    
+         nav{
+            display: block;
+         }
+        .hero-text {
+            width:100%;
+            top: 10%;
+            font-size: 30px;
+        }
+        .grid-album{
+            grid-template-columns: 100px 100px 100px;
+            row-gap: 5px;
+        }
+        .grid-album img{
+            width:150px;
+            height:200px;
+        }
+        .offers{
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 400px 100px;
+             
+        }
+        .offers img{
+            width:150px;
+        }
+        footer {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        footer ul li {
+            margin:0;
+            gap: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+}
